@@ -24,5 +24,15 @@ func TestFibonnaci(t *testing.T) {
 			if test.input < 0 {
 				t.Errorf("Input must be greater than 0.")
 			}
+			expected := test.output
+			received, err := fib(test.input)
+			check(err, "test : fib(num)")
+	
+			for i, num := range expected {
+				if received[i] != num {
+					t.Errorf("Expected %v, got %v", received[i], num)
+				}
+	
+			}
 	}
 }
