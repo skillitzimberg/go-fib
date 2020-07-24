@@ -1,25 +1,31 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
-    "log"
+	"fmt"
+	"log"
+	"net/http"
 
-    "github.com/julienschmidt/httprouter"
+	"github.com/julienschmidt/httprouter"
 )
 
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-    fmt.Fprint(w, "Welcome!\n")
+	fmt.Fprint(w, "Welcome!\n")
 }
 
 func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-    fmt.Fprintf(w, "hello, %s!\n", ps.ByName("name"))
+	fmt.Fprintf(w, "hello, %s!\n", ps.ByName("name"))
 }
 
 func main() {
-    router := httprouter.New()
-    router.GET("/", Index)
-    router.GET("/hello/:name", Hello)
+	router := httprouter.New()
+	router.GET("/", Index)
+	router.GET("/hello/:name", Hello)
 
-    log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
+}
+
+func check(err error, from string) {
+	if err != nil {
+		log.Printf("Error from %s: %s", from, err)
+	}
 }
