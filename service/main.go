@@ -34,7 +34,7 @@ func Fibonacci(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 func main() {
 	router := httprouter.New()
 	router.GET("/", Index)
-	router.GET("/api/:number", Fibonacci)
+	router.GET("/api/fibonacci/:number", Fibonacci)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
