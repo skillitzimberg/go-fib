@@ -1,4 +1,5 @@
 import React from 'react';
+import './FibInput.css';
 
 export const FibInput = () => {
   console.log('FibInput rendered');
@@ -34,7 +35,8 @@ export const FibInput = () => {
         <input type="number" min="1" id="fib" onChange={onChange} />
         <input type="submit" value="Enter" />
       </form>
-      <p>{fibSeq}</p>
+      <p>Results:</p>
+      <p id="results">{fibSeq}</p>
     </>
   );
 };

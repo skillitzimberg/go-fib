@@ -5,6 +5,7 @@ import { FibInput } from './FibInput';
 function App() {
   return (
     <div className="App">
+      <h1>Fibonacci Sequence</h1>
       <FibInput />
     </div>
   );

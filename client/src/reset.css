@@ -1,0 +1,136 @@
+/* Based on Todd McLeod's css reset */
+
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+button,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+img,
+input,
+ins,
+kbd,
+li,
+label,
+legend,
+mark,
+nav,
+ol,
+output,
+p,
+pre,
+q,
+s,
+samp,
+section,
+select,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+time,
+tr,
+u,
+ul,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* inherits the browser's font properties: font-size 16px */
+  font: inherit;
+  /*  specifies the vertical alignment of an inline element */
+  vertical-align: baseline;
+
+  box-sizing: border-box;
+
+  /*  specifies the height of line boxes within the element. */
+  line-height: 1;
+
+  border-radius: 0;
+
+  /* no outline around anything */
+  outline: none;
+
+  /* inherit the color value of the parent */
+  color: inherit;
+}
+
+a {
+  /* no underline */
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+blockquote,
+q {
+  /* no quotes */
+  quotes: none;
+}
+
+ol,
+ul {
+  /* no bullets in lists */
+  list-style: none;
+}
+
+table {
+  /* no spacing between cells*/
+  border-spacing: 0;
+  /*borders are collapsed - adjacent table cells share borders */
+  border-collapse: collapse;
+}
+
+input,
+select,
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+svg {
+  width: 1.9em;
+  height: 1.9em;
+  fill: currentColor;
+}

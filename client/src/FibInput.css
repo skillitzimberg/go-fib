@@ -1,0 +1,18 @@
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 40vw;
+  height: 20vw;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#results {
+  text-align: justify;
+  border: 2px solid black;
+  padding: 2rem;
+}
