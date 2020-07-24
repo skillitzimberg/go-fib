@@ -1,6 +1,9 @@
 import React from 'react';
 
 export const FibInput = () => {
+  const [fibNum, setFibNum] = React.useState(0);
+  const [fibSeq, setFibSeq] = React.useState([]);
+
   return (
     <>
       <form id="fibForm">
